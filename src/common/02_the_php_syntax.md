@@ -178,7 +178,7 @@ Methods without any explicit visibility keyword are defined as `public`.
 
 ### Type Hinting
 
-Works with classes, interfaces, arrays or `callable`. You can't use
+Works with objects, interfaces, arrays or `callable`. You can't use
 scalar types such as `int` or `string`:
 
     !php
@@ -296,7 +296,9 @@ This is different!
 ### Inheritance
 
     !php
-    interface MyTraversable extends Traversable
+    // Interface may extend several other interfaces.
+    // This is not possible with class though!
+    interface MyTraversable extends Traversable, Countable
     {
     }
 
